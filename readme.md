@@ -23,7 +23,7 @@ Aquí subiremos y actualizaremos nuestro trabajo, siguiendo unas **buenas práct
 
 ### 🔹 Primera vez (tras clonar el repo)
 
-1. Clona este repo en tu carpeta `Proyectos`Y ASEGÚRATE de trabajar dentro de él usando el comando cd y el nombre del repo:
+1. Clona este repo en tu carpeta `Proyectos`y ASEGÚRATE de trabajar dentro de él usando el comando cd y el nombre del repo:
 
    git clone https://github.com/lisigaar/proyect-promo-58-module-1-team-1.git
 
