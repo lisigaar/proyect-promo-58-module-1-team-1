@@ -39,7 +39,7 @@ Aquí subiremos y actualizaremos nuestro trabajo, siguiendo unas **buenas práct
 `git commit -m "mensaje"`
 `git push`
 
-## 🔹 Día a día (trabajo habitual)
+### 🔹 Día a día (trabajo habitual)
 
 1. Traer los cambios de las compis ANTES de empezar:
    `git pull`
