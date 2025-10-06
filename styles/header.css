@@ -1,0 +1,126 @@
+/* --------------- RESET y ESTILOS GENERALES------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+.header {
+  background-color: #74c69d; /* color de fondo del header */
+  display: flex; /* usamos flexbox para alinear los elementos en fila */
+  justify-content: flex-start; /* los elementos se colocan al inicio (de izquierda a derecha) */
+  align-items: center; /* los centra verticalmente dentro del header */
+  padding: 12px 16px; /* espacio interior general: arriba/abajo 12px, lados 16px */
+
+  /* El padding en el header da aire al contenido, 
+     así no necesitamos poner paddings individuales a cada elemento */
+}
+
+/* Logo */
+.logo {
+  width: 40px; /* tamaño fijo del logo (ajustable según diseño) */
+  height: auto; /* mantiene proporción de la imagen */
+  display: block; /* evita el espacio blanco debajo (por defecto las img son inline) */
+  cursor: pointer; /* cambia el cursor indicando que es clicable */
+}
+
+/* Texto de marca */
+.adatech {
+  margin-left: 5px; /* separa un poquito el texto del logo */
+  color: white; /* color de texto blanco para contraste con el fondo verde */
+  font-family: Arial, Helvetica, sans-serif; /* tipografía sans-serif simple y legible */
+  font-size: 30px; /* tamaño del texto */
+  font-weight: 500; /* grosor de la letra, algo menos que bold */
+  letter-spacing: 1px; /* separa un poquito las letras */
+  /* No se usa padding ni width/height aquí porque el texto ya se adapta naturalmente */
+}
+
+/* Hamburguesa: a la derecha */
+.menu-hamburguesa {
+  margin-left: auto; /* empuja la hamburguesa completamente a la derecha del header */
+  width: 30px; /* tamaño del icono */
+  height: auto; /* mantiene proporciones */
+  padding: 8px; /* aumenta el área clicable sin deformar la imagen */
+  display: block; /* evita el espacio extra bajo la imagen */
+  cursor: pointer; /* cursor tipo "mano" al pasar por encima */
+
+  /* margin-left:auto funciona porque estamos en un contenedor flex: 
+     empuja este elemento al extremo derecho */
+}
+
+/* Menú principal oculto en móvil */
+.menu-principal {
+  display: none;
+} /* lo ocultamos en móvil, se mostrará más adelante en pantallas grandes */
+
+.menu-principal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0x;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* añade “aire” entre los <li> */
+}
+
+.menu-principal a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.menu-principal a:hover {
+  color: #426e58; /* color al pasar el ratón sobre el menú */
+}
+
+.menu-principal a.boton-contacto {
+  border: 2px solid #fff;      /* reborde tipo botón */
+  border-radius: 9999px;         /* forma “píldora” */
+  padding: 8px 14px;             /* más área clicable */
+  display: block;                /* el padding se aplica al bloque entero */
+  transition: background-color .2s, color .2s;
+}
+
+.menu-principal a.boton-contacto:hover {
+  background: #fff;              /* invertimos colores al pasar el ratón */
+  color: #74c69d;
+}
+
+/* ---------------- BREAKPOINT ------------------ */
+
+/*Mostrar menú y ocultar hamburguesa a partir de tablet */
+
+/* Tablet (desde 768px hasta ~1200px) */
+@media (min-width: 768px) {
+  .header {
+    padding: 20px 40px;
+  }
+  .menu-hamburguesa {
+    display: none;
+  }
+  .menu-principal {
+    display: block;
+    margin-left: auto;
+  }
+  .logo {
+    width: 45px;
+  }
+  .adatech {
+    font-size: 35px;
+  }
+}
+
+/* Escritorio (desde 1200px hacia arriba) */
+@media (min-width: 1200px) {
+  .header {
+    padding: 30px 120px; /* mucho más aire en escritorio */
+  }
+  .menu-principal ul {
+    gap: 42px;
+  } /* un poco más de aire en los elementos del menú*/
+  .menu-principal a {
+    font-size: 16px; /* letra menú más grande*/
+  }
+}
