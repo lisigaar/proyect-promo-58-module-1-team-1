@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+section {
+  padding: 40px 20px; /* 40px arriba y abajo, 20px a los lados*/
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px; /* Espacio entre bloques */
+}
+
+.features-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.features-img img {
+  width: 335px;
+  height: 241px;
+  object-fit: contain; /*Asegura que la imagen no se deforme; se ajusta al tamaño sin recortarse.*/
+  display: block; /*Elimina inline por defecto*/
+}
+
+/* Contenido */
+.features-content {
+  width: 334px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /*Alinea todo a la izquierda*/
+}
+
+.features-title {
+  font-family: "Crimson Text", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.features-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  color: #212529cc; /*cc opacidad al 80%*/
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.features-button-box {
+  width: 100%; /*Ocupa todo el ancho del .features-content.*/
+  display: flex;
+  justify-content: flex-start;
+}
+
+.features-button {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.25rem;
+  width: 170px;
+  height: 48px;
+  padding: 13px 45.5px 10px 44.5px;
+  border-radius: 5px;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  line-height: 1.5625rem;
+  position: relative; /*Posicionamiento necesario para usar z-index.*/
+  z-index: 999; /* Asegura que no quede debajo de nada */
+}
