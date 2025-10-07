@@ -1,9 +1,14 @@
 /* --------------- RESET y ESTILOS GENERALES------------------ */
-
+:root {
+  font-family: "Work Sans", "Crimson Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Crimson Text";
 }
 
 /* ---------------- HEADER ---------------- */
@@ -76,15 +81,15 @@ body {
 }
 
 .menu-principal a.boton-contacto {
-  border: 2px solid #fff;      /* reborde tipo botón */
-  border-radius: 9999px;         /* forma “píldora” */
-  padding: 8px 14px;             /* más área clicable */
-  display: block;                /* el padding se aplica al bloque entero */
-  transition: background-color .2s, color .2s;
+  border: 2px solid #fff; /* reborde tipo botón */
+  border-radius: 9999px; /* forma “píldora” */
+  padding: 8px 14px; /* más área clicable */
+  display: block; /* el padding se aplica al bloque entero */
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .menu-principal a.boton-contacto:hover {
-  background: #fff;              /* invertimos colores al pasar el ratón */
+  background: #fff; /* invertimos colores al pasar el ratón */
   color: #74c69d;
 }
 
