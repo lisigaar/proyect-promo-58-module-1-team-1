@@ -1,0 +1,86 @@
+/* SECCION TEAM - MONICA */
+
+.team {
+    display: flex;
+    /* permite distribuir los elementos hijos dentro del contenedor */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    /* Espacio lateral */
+
+}
+
+.our_team {
+    font-family: "Crimson Text", sans-serif;
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+.team_member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0;
+    /* los elementos no crecen para ocupar espacio adicional */
+    justify-content: center;
+    width: 17rem;
+    height: 19rem;
+    margin: 0 0 2rem;
+    /* espacio exterior superior / derecho e izquierdo / inferior */
+    border-radius: 5px;
+    box-shadow: 3px 4px 12px 1px;
+    padding: 1.25rem 2rem 1.25rem 2rem;
+    gap: 1rem;
+}
+
+.member_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 0;
+    gap: 19px;
+    width: 100%;
+}
+
+.member_img {
+    width: 11rem;
+    height: 11rem;
+    border: 2px solid black;
+    object-fit: cover;
+    /* Mantiene proporciones sin distorsión */
+    object-position: center;
+    /* Centra la imagen */
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* Incluye el border en el tamaño */
+}
+
+.member_name {
+    font-size: 1.5rem;
+    margin: 0;
+    /* Elimina el margen por defecto del h3 */
+    text-align: left;
+}
+
+.member_title {
+    font-size: 1rem;
+    font-family: "WorkSans", sans-serif;
+    margin: 0;
+    /* Elimina el margen por defecto del p */
+    text-align: left;
+}
+
+/* Para móviles pequeños 
+@media (max-width: 480px) {
+    .team_member {
+        width: 80vw;
+        80% del ancho de la pantalla
+        max-width: 280px;
+        height: auto;
+        Altura automática
+        min-height: 12rem;
+        padding: 1rem;
+    }
+} */
