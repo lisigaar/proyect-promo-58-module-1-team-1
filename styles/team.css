@@ -72,8 +72,8 @@
     text-align: left;
 }
 
-/* Para móviles pequeños 
-@media (max-width: 480px) {
+/* Para desktop 
+@media (max-width: xpx) {
     .team_member {
         width: 80vw;
         80% del ancho de la pantalla
