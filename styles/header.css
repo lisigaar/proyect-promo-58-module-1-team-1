@@ -1,4 +1,9 @@
 /* --------------- RESET y ESTILOS GENERALES------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 :root {
   font-family: "Work Sans", "Crimson Text", sans-serif;
   font-optical-sizing: auto;
