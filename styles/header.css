@@ -50,7 +50,7 @@ body {
 /* Hamburguesa: a la derecha */
 .menu-hamburguesa {
   margin-left: auto; /* empuja la hamburguesa completamente a la derecha del header */
-  width: 30px; /* tamaño del icono */
+  width: 45px; /* tamaño del icono */
   height: auto; /* mantiene proporciones */
   padding: 8px; /* aumenta el área clicable sin deformar la imagen */
   display: block; /* evita el espacio extra bajo la imagen */
@@ -77,8 +77,12 @@ body {
 .menu-principal a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 3px;
+  flex-grow: 0;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.25;
+  font-family: "Work Sans";
 }
 
 .menu-principal a:hover {
@@ -131,6 +135,21 @@ body {
     gap: 42px;
   } /* un poco más de aire en los elementos del menú*/
   .menu-principal a {
-    font-size: 16px; /* letra menú más grande*/
+    flex-grow: 0;
+    font-size: 20px; /* letra menú más grande*/
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1.25;
+    font-family: "Work Sans";
+  }
+
+  .adatech {
+    font-family: "Work Sans";
+    font-size: 40px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
   }
 }
