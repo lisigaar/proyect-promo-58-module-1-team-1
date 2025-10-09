@@ -40,7 +40,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-grow: 0;
-    gap: 19px;
+    gap: 1.2rem;
     width: 100%;
 }
 
@@ -72,15 +72,26 @@
     text-align: left;
 }
 
-/* Para desktop 
-@media (max-width: xpx) {
-    .team_member {
-        width: 80vw;
-        80% del ancho de la pantalla
-        max-width: 280px;
-        height: auto;
-        Altura automática
-        min-height: 12rem;
-        padding: 1rem;
+/* Media queries para desktop (a partir de 1200px)*/
+@media all and (min-width: 1200px) {
+    .team {        
+        flex-direction: row;
+        justify-content: space-between;        
+        flex: 1;
+        /* Cada elemento ocupa el mismo espacio */
+        gap: 2rem;
     }
-} */
+
+    .team_member {
+        width: 18%;        
+        object-fit: cover; /* Evita que se deforme el elemento */
+    }
+
+    .member_name {
+        font-size: 1.2rem;
+    }
+
+    .member_title {
+        font-size: 0.9rem;
+    }
+}
