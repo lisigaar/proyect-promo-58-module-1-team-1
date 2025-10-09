@@ -1,18 +1,54 @@
 .footer-icons {
-    font-weight: 500;
+
+    /*tamaño icons*/
     background-color: #74c69dc0;
     display: flex;
-    justify-content: center;
-    gap: 4rem;
-
+    /* elemento flexible*/
+    flex-direction: column;
+    /* para iconos y texto*/
+    align-items: center;
+    padding: 2rem
+        /*espacio relleno*/
 }
+
 
 .social-media {
     display: flex;
-    text-align: center;
+    justify-content: center;
+    /*coloca los iconos*/
+    gap: 1.5rem;
+    /*espacio entre iconos*/
 }
 
 .copyright {
+    font-family: "Work Sans";
+    font-weight: normal;
+    line-height: 1.25;
     color: white;
-    flex-direction: column;
+    padding-top: 0.5rem;
+    /*relleno por encima*/
+    font-size: 20px;
+
+}
+
+/* @media queris*/
+@media all and (min-width: 1200px) {
+    .footer-icons {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 6rem;
+
+    }
+
+    .social-media {
+        /* elemento flexible*/
+        align-self: flex-start;
+    }
+
+
+    .copyright {
+        align-self: flex-end;
+    }
+
 }
