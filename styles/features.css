@@ -1,31 +1,33 @@
-section {
-  padding: 40px 20px; /* 40px arriba y abajo, 20px a los lados*/
+.features-section {
+  padding: 2.5rem 1.25rem; /* 2.5rem arriba y abajo, 1.25rem a los lados*/
+  background-color: white;
 }
 
 .features {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px; /* Espacio entre bloques */
+  margin-bottom: 4rem; /* Espacio entre bloques */
 }
 
 .features-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .features-img img {
-  width: 335px;
-  height: 241px;
-  object-fit: contain; /*Asegura que la imagen no se deforme; se ajusta al tamaño sin recortarse.*/
-  display: block; /*Elimina inline por defecto*/
+  width: 100%;
+  height: auto; /*Mantiene proporción */
+  max-width: 100%; /*La imagen nunca se sale de su contenedor.*/
+  object-fit: contain; /*Se ajusta al contenedor sin deformarse.*/
 }
 
 /* Contenido */
 .features-content {
-  width: 334px;
+  max-width: 50rem; /*Mejor que width para que se reduzca en pantallas pequeñas sin deformarse*/
+  width: 100%; /*Permite que se adapte si el viewport es menor */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /*Alinea todo a la izquierda*/
@@ -33,19 +35,19 @@ section {
 
 .features-title {
   font-family: "Crimson Text", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #212529;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   line-height: 1.25;
 }
 
 .features-text {
   font-family: "Work Sans", sans-serif;
-  font-size: 15px;
-  color: #212529cc; /*cc opacidad al 80%*/
+  font-size: 0.9375rem;
+  color: #21252980;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 /* Botón */
@@ -57,15 +59,57 @@ section {
 
 .features-button {
   font-family: "Work Sans", sans-serif;
-  font-size: 1.25rem;
-  width: 170px;
-  height: 48px;
-  padding: 13px 45.5px 10px 44.5px;
-  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 1rem;
+  border-radius: 0.3125rem;
+  text-decoration: none;
   background-color: #212529;
   color: white;
   text-align: center;
-  line-height: 1.5625rem;
-  position: relative; /*Posicionamiento necesario para usar z-index.*/
-  z-index: 999; /* Asegura que no quede debajo de nada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features-button:hover {
+  /*Para dar sensación de interacción*/
+  background-color: #343a40;
+}
+@media (min-width: 1200px) {
+  .features {
+    flex-direction: row;
+    justify-content: space-between; /*Reparte imagen y texto*/
+    gap: 3rem;
+    margin: 1.25rem 3.75rem 3.75rem 3.75rem;
+  }
+  .features-content {
+    width: 45%;
+    max-width: none; /*Quitamos el límite de versión movil*/
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .features-img {
+    width: 45%; /*Imagen ocupa el 45% del contenedor .features.*/
+  }
+  .features-img img {
+    width: 100%;
+    height: auto;
+  }
+  .features-title {
+    font-size: 2rem;
+  }
+  .features-text {
+    font-size: 1.125rem;
+  }
+  .features-button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: normal;
+  }
+  .features-2 {
+    flex-direction: row-reverse;
+  }
 }
