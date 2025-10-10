@@ -1,97 +1,142 @@
 /* SECCION TEAM - MONICA */
 
 .team {
-    display: flex;
-    /* permite distribuir los elementos hijos dentro del contenedor */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    /* Espacio lateral */
-
+  display: flex;
+  /* permite distribuir los elementos hijos dentro del contenedor */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25 2.438 1.188 2.375;
+  font-family: "Crimson Text", sans-serif;
 }
 
 .our_team {
-    font-family: "Crimson Text", sans-serif;
-    padding-bottom: 1.5em;
-    text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  /* Centra el elemento */
+  padding: 2rem 0 3rem 0;
+  flex-grow: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
 }
 
 .team_member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 0;
-    /* los elementos no crecen para ocupar espacio adicional */
-    justify-content: center;
-    width: 17rem;
-    height: 19rem;
-    margin: 0 0 2rem;
-    /* espacio exterior superior / derecho e izquierdo / inferior */
-    border-radius: 5px;
-    box-shadow: 3px 4px 12px 1px;
-    padding: 1.25rem 2rem 1.25rem 2rem;
-    gap: 1rem;
-}
-
-.member_info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-grow: 0;
-    gap: 1.2rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 0;
+  /* los elementos no crecen para ocupar espacio adicional */
+  justify-content: flex-start;
+  width: 17.438rem;
+  height: 18.688em;
+  margin: 0 0 2.188rem;
+  /* espacio exterior superior / derecho e izquierdo / inferior */
+  border-radius: 0.313rem;
+  box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+  background-color: var(--color-white-100);
+  padding: 1.25rem 2rem 1.25rem 2rem;
+  gap: 2.188rem;
 }
 
 .member_img {
-    width: 11rem;
-    height: 11rem;
-    border: 2px solid black;
-    object-fit: cover;
-    /* Mantiene proporciones sin distorsión */
-    object-position: center;
-    /* Centra la imagen */
-    border-radius: 50%;
-    box-sizing: border-box;
-    /* Incluye el border en el tamaño */
+  width: 10.938rem;
+  max-width: 100%;
+  height: 10.938rem;
+  max-height: 100%;
+  border: 2px solid black;
+  object-fit: cover;
+  /* Mantiene proporciones sin distorsión */
+  object-position: center;
+  /* Centra la imagen */
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* Incluye el border en el tamaño */
+}
+
+.member_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 0;
+  gap: 1.2rem;
+  padding: 0;
+  width: 12.625rem;
+  height: 4.125rem;
+  font-family: Work Sans;
+  gap: 1.063rem;
 }
 
 .member_name {
-    font-size: 1.5rem;
-    margin: 0;
-    /* Elimina el margen por defecto del h3 */
-    text-align: left;
+  font-size: 1.5rem;
+  margin: 0;
+  /* Elimina el margen por defecto del h3 */
+  text-align: left;
+  flex-grow: 0;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212529;
 }
 
 .member_title {
-    font-size: 1rem;
-    font-family: "WorkSans", sans-serif;
-    margin: 0;
-    /* Elimina el margen por defecto del p */
-    text-align: left;
+  font-size: 0.938rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: left;
+  color: var(--color-dark-75);
+  margin: 0;
+  margin-top: -0.5rem;
+  padding: 0;
+  height: auto;
+  width: 100%;
+
+  /* Media queries para tablet (768px-1200px)*/
+}
+
+@media (min-width: 768px) {
+  .team {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 2.813rem;
+    margin: 0 1.25rem;
+  }
+
+  .our_team {
+    font-size: 40px;
+  }
+
+  .team_member {
+    height: auto;
+    width: 30%;
+  }
 }
 
 /* Media queries para desktop (a partir de 1200px)*/
-@media all and (min-width: 1200px) {
-    .team {        
-        flex-direction: row;
-        justify-content: space-between;        
-        flex: 1;
-        /* Cada elemento ocupa el mismo espacio */
-        gap: 2rem;
-    }
 
-    .team_member {
-        width: 18%;        
-        object-fit: cover; /* Evita que se deforme el elemento */
-    }
+@media (min-width: 1200px) {
+  .team {
+    flex-wrap: wrap;
+  }
 
-    .member_name {
-        font-size: 1.2rem;
-    }
+  .member_name {
+    font-size: 1.5rem;
+  }
 
-    .member_title {
-        font-size: 0.9rem;
-    }
+  .member_title {
+    font-size: 0.938rem;
+  }
 }
