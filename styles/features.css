@@ -20,14 +20,12 @@
 .features-img img {
   width: 100%;
   height: auto; /*Mantiene proporción */
-  max-width: 100%; /*La imagen nunca se sale de su contenedor.*/
   object-fit: contain; /*Se ajusta al contenedor sin deformarse.*/
 }
 
 /* Contenido */
 .features-content {
-  max-width: 50rem; /*Mejor que width para que se reduzca en pantallas pequeñas sin deformarse*/
-  width: 100%; /*Permite que se adapte si el viewport es menor */
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start; /*Alinea todo a la izquierda*/
@@ -52,7 +50,6 @@
 
 /* Botón */
 .features-button-box {
-  width: 100%; /*Ocupa todo el ancho del .features-content.*/
   display: flex;
   justify-content: flex-start;
 }
@@ -66,7 +63,6 @@
   text-decoration: none;
   background-color: #212529;
   color: white;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,17 +81,12 @@
   .features-content {
     width: 45%;
     max-width: none; /*Quitamos el límite de versión movil*/
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
   .features-img {
     width: 45%; /*Imagen ocupa el 45% del contenedor .features.*/
   }
   .features-img img {
     width: 100%;
-    height: auto;
   }
   .features-title {
     font-size: 2rem;
@@ -109,7 +100,7 @@
     text-align: center;
     font-weight: normal;
   }
-  .features-2 {
+  .feature-2 {
     flex-direction: row-reverse;
   }
 }
