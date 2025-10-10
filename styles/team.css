@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.25 2.438 1.188 2.375;
-  font-family: "Crimson Text", sans-serif;
+  padding: 0 2.438 1.188 2.375;
+  font-family: "Crimson Text", sans-serif;  
 }
 
 .our_team {
@@ -16,7 +16,7 @@
   height: auto;
   margin: 0 auto;
   /* Centra el elemento */
-  padding: 2rem 0 3rem 0;
+  padding: 1rem 0 3rem 0;
   flex-grow: 0;
   font-size: 1.5rem;
   font-weight: bold;
