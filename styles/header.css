@@ -30,7 +30,7 @@ body {
 
 /* Logo */
 .logo {
-  width: 40px; /* tamaño fijo del logo (ajustable según diseño) */
+  width: 45px; /* tamaño fijo del logo (ajustable según diseño) */
   height: auto; /* mantiene proporción de la imagen */
   display: block; /* evita el espacio blanco debajo (por defecto las img son inline) */
   cursor: pointer; /* cambia el cursor indicando que es clicable */
@@ -38,12 +38,13 @@ body {
 
 /* Texto de marca */
 .adatech {
-  margin-left: 5px; /* separa un poquito el texto del logo */
+  margin-left: 10px; /* separa un poquito el texto del logo */
   color: white; /* color de texto blanco para contraste con el fondo verde */
   font-family: Arial, Helvetica, sans-serif; /* tipografía sans-serif simple y legible */
-  font-size: 30px; /* tamaño del texto */
+  font-size: 40px; /* tamaño del texto */
   font-weight: 500; /* grosor de la letra, algo menos que bold */
-  letter-spacing: 1px; /* separa un poquito las letras */
+  letter-spacing: normal; /* separa un poquito las letras */
+  line-height: 1.25;
   /* No se usa padding ni width/height aquí porque el texto ya se adapta naturalmente */
 }
 
@@ -71,7 +72,7 @@ body {
   padding: 0x;
   display: flex;
   align-items: center;
-  gap: 20px; /* añade “aire” entre los <li> */
+  gap: 30px; /* añade “aire” entre los <li> */
 }
 
 .menu-principal a {
@@ -118,6 +119,11 @@ body {
     display: block;
     margin-left: auto;
   }
+
+  .menu-principal a {
+    font-size: 18px;
+  }
+
   .logo {
     width: 45px;
   }
@@ -132,7 +138,7 @@ body {
     padding: 30px 120px; /* mucho más aire en escritorio */
   }
   .menu-principal ul {
-    gap: 42px;
+    gap: 30px;
   } /* un poco más de aire en los elementos del menú*/
   .menu-principal a {
     flex-grow: 0;
@@ -151,5 +157,11 @@ body {
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
+  }
+
+  .logo {
+    width: 70px;
+    height: auto;
+    flex-grow: 0;
   }
 }

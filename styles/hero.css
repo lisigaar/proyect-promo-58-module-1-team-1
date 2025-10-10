@@ -86,27 +86,27 @@
 
 @media (min-width: 1200px) {
   
-
-    .hero {
+  .hero {
       flex-direction: row-reverse;
       justify-content: space-between;
-     
+      padding: 30px 120px;
+      gap: 120px;
   }
   
-
   .hero-img {
-    
+    display: flex;
+    align-items: center;
+    width: 45%;
   }
 
   .hero-img img {
-    width: 645px;
-    height: 379px;
-   
+    width: 100%;
+    height: auto;
   }
 
   .hero-text {
     width: 416px;
     height: 299px;
 }
-
+  
 }
