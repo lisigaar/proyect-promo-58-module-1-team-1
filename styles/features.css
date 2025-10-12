@@ -1,5 +1,5 @@
 .features-section {
-  padding: 1rem 1.25rem; /* 2.5rem arriba y abajo, 1.25rem a los lados*/
+  padding: 1rem 1.25rem; 
   background-color: white;
 }
 
@@ -76,7 +76,8 @@
     flex-direction: row;
     justify-content: space-between; /*Reparte imagen y texto*/
     gap: 3rem;
-    margin: 1.25rem 3.75rem 0rem 3.75rem;
+    margin: 1.25rem 0rem 5rem 0rem;
+    padding: 3rem 7.5rem 0 7.5rem;
   }
   .features-content {
     width: 45%;
@@ -89,10 +90,10 @@
     width: 100%;
   }
   .features-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .features-text {
-    font-size: 1.125rem;
+    font-size: 0.938rem;
   }
   .features-button {
     padding: 1rem;

@@ -30,7 +30,7 @@
 
 }
 
-/* @media queris*/
+/* @media queries*/
 @media all and (min-width: 1200px) {
     .footer-icons {
 
@@ -38,18 +38,7 @@
         justify-content: space-between;
         align-items: center;
         height: 6rem;
+        padding: 0 7.5rem 0 7.5rem;
 
     }
-
-    .social-media {
-        /* elemento flexible*/
-        align-self: flex-start;
-
-    }
-
-
-    .copyright {
-        align-self: flex-end;
-    }
-
 }

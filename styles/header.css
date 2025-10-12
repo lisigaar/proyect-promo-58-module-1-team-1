@@ -1,8 +1,7 @@
 /* --------------- RESET y ESTILOS GENERALES------------------ */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0;  
 }
 :root {
   font-family: "Work Sans", "Crimson Text", sans-serif;
@@ -11,8 +10,8 @@
   font-style: normal;
 }
 body {
+  padding: 0;  
   margin: 0;
-  padding: 0;
   font-family: "Crimson Text";
 }
 
@@ -22,10 +21,20 @@ body {
   display: flex; /* usamos flexbox para alinear los elementos en fila */
   justify-content: flex-start; /* los elementos se colocan al inicio (de izquierda a derecha) */
   align-items: center; /* los centra verticalmente dentro del header */
-  padding: 12px 16px; /* espacio interior general: arriba/abajo 12px, lados 16px */
+  padding: 0.75rem 1.25rem; /* espacio interior general: arriba/abajo 12px, lados 16px */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+   
 
   /* El padding en el header da aire al contenido, 
      así no necesitamos poner paddings individuales a cada elemento */
+}
+
+main {
+  margin-top: 73px;
 }
 
 /* Logo */
@@ -135,7 +144,7 @@ body {
 /* Escritorio (desde 1200px hacia arriba) */
 @media (min-width: 1200px) {
   .header {
-    padding: 30px 120px; /* mucho más aire en escritorio */
+    padding: 1.875rem 7.5rem; /* mucho más aire en escritorio */
   }
   .menu-principal ul {
     gap: 30px;
