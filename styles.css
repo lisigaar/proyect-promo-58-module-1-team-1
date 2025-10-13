@@ -1,0 +1,555 @@
+/* RESET y ESTILOS GENERALES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  font-family: "Work Sans", "Crimson Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Crimson Text";
+}
+
+/* HEADER SECTION */
+
+.header {
+  background-color: #74c69d; /* color de fondo del header */
+  display: flex; /* usamos flexbox para alinear los elementos en fila */
+  justify-content: flex-start; /* los elementos se colocan al inicio (de izquierda a derecha) */
+  align-items: center; /* los centra verticalmente dentro del header */
+  padding: 0.75rem 1.25rem; /* espacio interior general: arriba/abajo 12px, lados 16px */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* El padding en el header da aire al contenido, 
+     así no necesitamos poner paddings individuales a cada elemento */
+}
+
+main {
+  margin-top: 73px;
+}
+
+/* Logo */
+.logo {
+  width: 45px; /* tamaño fijo del logo (ajustable según diseño) */
+  height: auto; /* mantiene proporción de la imagen */
+  display: block; /* evita el espacio blanco debajo (por defecto las img son inline) */
+  cursor: pointer; /* cambia el cursor indicando que es clicable */
+}
+
+/* Texto de marca */
+.adatech {
+  margin-left: 10px; /* separa un poquito el texto del logo */
+  color: white; /* color de texto blanco para contraste con el fondo verde */
+  font-family: Arial, Helvetica, sans-serif; /* tipografía sans-serif simple y legible */
+  font-size: 40px; /* tamaño del texto */
+  font-weight: 500; /* grosor de la letra, algo menos que bold */
+  letter-spacing: normal; /* separa un poquito las letras */
+  line-height: 1.25;
+  /* No se usa padding ni width/height aquí porque el texto ya se adapta naturalmente */
+}
+
+/* Hamburguesa: a la derecha */
+.menu-hamburguesa {
+  margin-left: auto; /* empuja la hamburguesa completamente a la derecha del header */
+  width: 45px; /* tamaño del icono */
+  height: auto; /* mantiene proporciones */
+  padding: 8px; /* aumenta el área clicable sin deformar la imagen */
+  display: block; /* evita el espacio extra bajo la imagen */
+  cursor: pointer; /* cursor tipo "mano" al pasar por encima */
+
+  /* margin-left:auto funciona porque estamos en un contenedor flex: 
+     empuja este elemento al extremo derecho */
+}
+
+/* Menú principal oculto en móvil */
+.menu-principal {
+  display: none;
+} /* lo ocultamos en móvil, se mostrará más adelante en pantallas grandes */
+
+.menu-principal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0x;
+  display: flex;
+  align-items: center;
+  gap: 30px; /* añade “aire” entre los <li> */
+}
+
+.menu-principal a {
+  color: #fff;
+  text-decoration: none;
+  flex-grow: 0;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.25;
+  font-family: "Work Sans";
+}
+
+.menu-principal a:hover {
+  color: #426e58; /* color al pasar el ratón sobre el menú */
+}
+
+.menu-principal a.boton-contacto {
+  border: 2px solid #fff; /* reborde tipo botón */
+  border-radius: 9999px; /* forma “píldora” */
+  padding: 8px 14px; /* más área clicable */
+  display: block; /* el padding se aplica al bloque entero */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-principal a.boton-contacto:hover {
+  background: #fff; /* invertimos colores al pasar el ratón */
+  color: #74c69d;
+}
+
+/* ---------------- BREAKPOINT ------------------ */
+
+/*Mostrar menú y ocultar hamburguesa a partir de tablet */
+
+/* Tablet (desde 768px hasta ~1200px) */
+@media (min-width: 768px) {
+  .header {
+    padding: 20px 40px;
+  }
+  .menu-hamburguesa {
+    display: none;
+  }
+  .menu-principal {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu-principal a {
+    font-size: 18px;
+  }
+
+  .logo {
+    width: 45px;
+  }
+  .adatech {
+    font-size: 35px;
+  }
+}
+
+/* Escritorio (desde 1200px hacia arriba) */
+@media (min-width: 1200px) {
+  .header {
+    padding: 1.875rem 7.5rem; /* mucho más aire en escritorio */
+  }
+  .menu-principal ul {
+    gap: 30px;
+  } /* un poco más de aire en los elementos del menú*/
+  .menu-principal a {
+    flex-grow: 0;
+    font-size: 20px; /* letra menú más grande*/
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1.25;
+    font-family: "Work Sans";
+  }
+
+  .adatech {
+    font-family: "Work Sans";
+    font-size: 40px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+  }
+
+  .logo {
+    width: 70px;
+    height: auto;
+    flex-grow: 0;
+  }
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  background-color: #74c69d;
+  padding: 1.25rem;
+  gap: 7.5rem;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.hero-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+.hero-content {
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.welcome {
+  flex-grow: 0;
+  font-family: "Work Sans";
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 5px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.hero-title {
+  font-family: "Crimson Text", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+.hero-text {
+  color: #ffffffc0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.94rem;
+  margin-bottom: 1rem;
+}
+.hero-button-box {
+  display: flex;
+  justify-content: flex-start;
+}
+.hero-button {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  border-radius: 0.3125rem;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 1.5625rem;
+  border: none;
+  text-decoration: none;
+  padding: 0.8125rem 2.84375rem 0.625rem 2.78125rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .hero {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 6.75rem 2rem;
+    gap: 10%;
+  }
+  .hero-content {
+    width: 40%;
+    max-width: none;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-img img {
+    width: 100%;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-text {
+    font-size: 1.125rem;
+  }
+  .hero-button {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 1rem 2rem 0 2rem;
+    gap: 8%;
+  }
+  .hero-content {
+    width: 50%;
+    max-width: none;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-img img {
+    width: 100%;
+  }
+  .hero-title {
+    font-size: 0rem;
+  }
+  .hero-text {
+    font-size: 1rem;
+  }
+  .hero-button {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+
+/* FEATURES SECTION */
+
+.features-section {
+  padding: 1rem 1.25rem;
+  background-color: white;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.features-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.875rem;
+}
+
+.features-img img {
+  width: 100%;
+  height: auto; /*Mantiene proporción */
+  object-fit: contain; /*Se ajusta al contenedor sin deformarse.*/
+}
+
+/* Contenido */
+.features-content {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /*Alinea todo a la izquierda*/
+}
+
+.features-title {
+  font-family: "Crimson Text", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.features-text {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #21252980;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Botón */
+.features-button-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.features-button {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 1rem;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  background-color: #212529;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features-button:hover {
+  /*Para dar sensación de interacción*/
+  background-color: #343a40;
+}
+@media (min-width: 1200px) {
+  .features {
+    flex-direction: row;
+    justify-content: space-between; /*Reparte imagen y texto*/
+    gap: 3rem;
+    margin: 1.25rem 0rem 5rem 0rem;
+    padding: 3rem 7.5rem 0 7.5rem;
+  }
+  .features-content {
+    width: 45%;
+    max-width: none; /*Quitamos el límite de versión movil*/
+  }
+  .features-img {
+    width: 45%; /*Imagen ocupa el 45% del contenedor .features.*/
+  }
+  .features-img img {
+    width: 100%;
+  }
+  .features-title {
+    font-size: 2.5rem;
+  }
+  .features-text {
+    font-size: 0.938rem;
+  }
+  .features-button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: normal;
+  }
+  .features-2 {
+    flex-direction: row-reverse;
+  }
+}
+
+/* TEAM SECTION */
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.25rem 1.188rem 1.25rem;
+}
+
+.our_team {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0 3rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: center;
+  color: #000;
+}
+
+.team_member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  max-width: 17.438rem;
+  margin: 0 0 2.188rem;
+  border-radius: 0.313rem;
+  box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+  background-color: var(--color-white-100);
+  padding: 1.25rem 2rem;
+  gap: 1.188rem;
+}
+
+.team_member_img {
+  max-width: 10.938rem;
+  border: 2px solid black;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.team_member_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  max-width: 12.625rem;
+  font-family: "Work Sans", sans-serif;
+  gap: 1.063rem;
+}
+
+.team_member_name {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #212529;
+}
+
+.team_member_title {
+  font-size: 0.938rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.25;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-dark-75);
+  margin: -0.5rem 0 0 0;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .team {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    max-width: 62rem;
+    margin: 0 auto 2rem;
+  }
+
+  .our_team {
+    font-size: 2.5rem;
+  }
+
+  .team_member {
+    margin: 2rem 2rem;
+  }
+}
+
+/* FOOTER SECTION */
+
+.footer-icons {
+  background-color: #74c69dc0;
+  display: flex;
+  /* elemento flexible*/
+  flex-direction: column;
+  /* para iconos y texto*/
+  align-items: center;
+  padding: 3rem;
+  /*espacio relleno*/
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  /*coloca los iconos*/
+  gap: 1.5rem;
+  /*espacio entre iconos*/
+}
+
+.copyright {
+  font-family: "Work Sans";
+  font-weight: normal;
+  line-height: 1.25;
+  color: white;
+  padding-top: 0.5rem;
+  /*relleno por encima*/
+  font-size: 20px;
+}
+
+/* @media queries*/
+@media all and (min-width: 1200px) {
+  .footer-icons {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 0 7.5rem 0 7.5rem;
+  }
+}
